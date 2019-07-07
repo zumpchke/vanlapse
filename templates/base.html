@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+<title>bodhi tree timelapse</title>
+</head>
+<center>
+	<h1>bodhi tree timelapse</h1>
+	<img src="/static/figleaf.png" width="300">
+	<p>the <a href="https://en.wikipedia.org/wiki/ficus_religiosa">ficus religiosa</a> tree lives for thousands of years.
+	how long will mine live for? ... let the journey begin.</p>
+
+	<h2>last 30 days of growth</h2>
+
+	<video controls>
+		<source src="/static/movie.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+
+	<h2>statistics</h2>
+	<p>
+	cataloguing  {{ num_images }} images.<br/>
+	first image from {{ first_img_date | lower }} utc.<br/>
+	last image from {{ last_img_date | lower }} utc.<br/>
+	average interval between images is {{ average_interval | round(1) }} minutes.<br/>
+	largest interval between images is {{ largest_interval | round(1) }} minutes.<br/>
+	</p>
+
+</center>
+

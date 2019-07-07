@@ -4,11 +4,16 @@ import os
 import glob
 from flask import Flask
 from flask import render_template
+
 app = Flask(__name__)
 
+def load_app(dir_name):
+    app.dir_name = dir_name
+    return app
+
 @app.route('/bodhi')
-def bodhi(directory):
-    img_list = glob.glob(os.path.join(directory, '*.jpg'))
+def bodhi():
+    img_list = glob.glob(os.path.join(app.dir_name, '*.jpg'))
     images = sorted(img_list, key=os.path.getmtime)
 
     # serve statistics to template

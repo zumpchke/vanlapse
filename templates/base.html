@@ -11,10 +11,16 @@
 
 	<h2>last 30 days of growth</h2>
 
+	{% if inprog %}
+	<p>ahh.. this is awkward. the timelapse is being generated. check back soon!</p>
+
+	{% else %}
+
 	<video controls>
 		<source src="/static/movie.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
+	{% endif %}
 
 	<h2>statistics</h2>
 	<p>

@@ -23,4 +23,4 @@ rsa==4.0
 six==1.12.0
 tqdm==4.32.2
 uritemplate==3.0.0
-Werkzeug==0.15.4
+Werkzeug==0.15.5
